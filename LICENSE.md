@@ -1,6 +1,12 @@
 MIT License
 
-Copyright (c) 2019 superflycss
+Copyright (c) 2019 superflycss  
+
+Copyright (c) 2019 Firefly Semantics Corporation  
+
+Copyright (c) 2019 Ole Ersoy  
+
+Copyright (c) Nicolas Gallagher
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

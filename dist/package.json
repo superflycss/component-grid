@@ -1,27 +1,27 @@
 {
-  "name": "@superflycss/component-test",
-  "version": "3.6.26",
-  "description": "Test component",
+  "name": "@superflycss/component-grid",
+  "version": "1.0.0",
+  "description": "Grid component",
   "main": "index.css",
   "scripts": {
     "update": "ncu -a && npm i"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/superflycss/component-test.git"
+    "url": "git+https://github.com/superflycss/component-grid.git"
   },
   "keywords": [
     "css",
     "component",
     "superflycss",
-    "test"
+    "grid"
   ],
   "author": "Ole Ersoy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/superflycss/component-test/issues"
+    "url": "https://github.com/superflycss/component-grid/issues"
   },
-  "homepage": "https://github.com/superflycss/component-test#readme",
+  "homepage": "https://github.com/superflycss/component-grid#readme",
   "dependencies": {
     "@superflycss/variables-dimension": "^2.0.0",
     "@superflycss/variables-fonts": "^3.0.0",
