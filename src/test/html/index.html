@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% import "@superflycss/component-test/TestHead.njk" as TestHead %}
+{% import "@superflycss/component-test/TestHeader.njk" as TestHeader %}
+{% import "@superflycss/component-test/TestTemplate.njk" as Test %}
+
+{{ TestHead.component( 'grid' ) }}
+
+<body>
+
+{{ TestHeader.component( 'grid' ) }}
+
+<!--START TEST 1-->
+
+{% set when1 %}
+<code class="u-text-color-md-pink-400">Grid </code> is applied.
+{% endset %}
+{% call Test.component( 'Grid', when1, 'Cells are rendered at full-width by default.' ) %}
+<div class="Grid">
+  <div>
+    <div class="TestBox">1</div>
+  </div>
+  <div>
+    <div class="TestBox">2</div>
+  </div>
+</div>
+{% endcall %}
+
+<!--START TEST 2-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid', when2, 'inter-cell whitespace is removed.' ) %}
+<div class="Grid">
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">2</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">3</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">4</div>
+  </div>
+</div>
+{% endcall %}
+
+
+<!--START TEST 3-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid', when2, 'overflowing elements are scrolled.' ) %}
+    <div class="Grid">
+      <div class="u-size1of2">
+        <div class="TestBoxLeft">
+<pre>This is some really really really really really long content that should be scrolled when the container is too small.</pre>
+        </div>
+      </div>
+      <div class="u-size1of2">
+        <div class="TestBox">
+<pre>This is some really really really really really long content that should be scrolled when the container is too small.</pre>
+        </div>
+      </div>
+    </div>
+{% endcall %}
+
+
+<!--START TEST 4-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid', when2, "cells automatically wrap across multiple lines when they don't fit a single row." ) %}
+  <div class="Grid">
+      <div class="u-size1of4">
+        <div class="TestBoxLeft">1</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBoxLeft">2</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBoxLeft">3</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBox">4</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBoxBottomLeft">5</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBoxBottomLeft">6</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBoxBottomLeft">7</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBoxBottom">8</div>
+      </div>
+    </div>
+{% endcall %}
+
+
+<!--START TEST 5-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid', when2, "cells of different heights are arranged into clear rows." ) %}
+<div class="Grid">
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-8rem">1</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-4rem">2</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-8rem">3</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-4rem">4</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-8rem">5</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-4rem">6</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-8rem">7</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-4rem">8</div>
+    </div>
+</div>
+{% endcall %}
+
+<!--START TEST 5-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid', when2, "it supports nested grids." ) %}
+<div class="Grid">
+  <div class="u-size3of4">
+    <div class="TestBox">
+      Level 1
+      <div class="Grid">
+        <div class="u-size1of3">
+          <div class="TestBoxLeft u-background-color-md-grey-900">Level 2</div>
+        </div>
+        <div class="u-size1of3">
+          <div class="TestBoxLeft u-background-color-md-grey-900">Level 2</div>
+        </div>
+        <div class="u-size1of3">
+          <div class="TestBox u-background-color-md-grey-900">Level 2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcall %}
+
+<!--START TEST 6-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid', when2, "supports u-sizeFill on cells with no width." ) %}
+<div class="Grid">
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">1/4</div>
+  </div>
+  <div class="u-sizeFill">
+    <div class="TestBox">auto</div>
+  </div>
+</div>
+<div class="Grid">
+  <div class="u-size2of12">
+    <div class="TestBoxBottomLeft">2/12</div>
+  </div>
+  <div class="u-sizeFill">
+    <div class="TestBoxBottomLeft">auto</div>
+  </div>
+  <div class="u-size2of12">
+    <div class="TestBoxBottom">2/12</div>
+  </div>
+</div>
+{% endcall %}
+
+
+<!--START TEST 7-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid', when2, "supports u-sizeFit and u-sizeFill." ) %}
+<div class="Grid">
+  <div class="u-sizeFit">
+    <div class="TestBoxLeft">u-sizeFit</div>
+  </div>
+  <div class="u-sizeFill">
+    <div class="TestBox">u-sizeFill</div>
+  </div>
+</div>
+{% endcall %}
+
+<!--START TEST 8-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--fill</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--fill', when2, "evenly distribute space between cells without sizing classes." ) %}
+<div class="Grid Grid--fill">
+  <div>
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div>
+    <div class="TestBoxLeft">2</div>
+  </div>
+  <div>
+    <div class="TestBox">3</div>
+  </div>
+</div>
+<div class="Grid Grid--fill">
+  <div>
+    <div class="TestBoxBottomLeft">1</div>
+  </div>
+  <div>
+    <div class="TestBoxBottomLeft">2</div>
+  </div>
+  <div>
+    <div class="TestBoxBottomLeft">3</div>
+  </div>
+  <div>
+    <div class="TestBoxBottomLeft">4</div>
+  </div>
+  <div>
+    <div class="TestBoxBottomLeft">5</div>
+  </div>
+  <div>
+    <div class="TestBoxBottom">6</div>
+  </div>
+</div>
+{% endcall %}
+
+
+<!--START TEST 9-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--fit</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--fit', when2, "it fits cells to their content." ) %}
+<div class="Grid Grid--fit TestCanvas">
+  <div>
+    <div class="TestBoxLeft">1<br> Lorem ipsum dolor sit amet</div>
+  </div>
+  <div>
+    <div class="TestBoxLeft">2<br> dolor sit amet</div>
+  </div>
+  <div>
+    <div class="TestBox">3<br> consectetur adipiscing elit</div>
+  </div>
+</div>
+<div class="Grid Grid--fit Grid--alignCenter">
+  <div class="u-size1of3">
+    <div class="TestBox u-sizeFill">1<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+  </div>
+  <div>
+    <div class="TestBoxRight u-sizeFill">2<br> dolor sit amet</div>
+  </div>
+  <div>
+    <div class="TestBoxRight u-sizeFill">3<br> consectetur adipiscing elit</div>
+  </div>
+</div>
+{% endcall %}
+
+<!--START TEST 10-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--alignCenter</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--alignCenter', when2, "all grid cells are center-aligns but not their content." ) %}
+<div class="Grid Grid--alignCenter">
+  <div class="u-size1of3">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of3">
+    <div class="TestBox">2</div>
+  </div>
+  <div class="u-size1of2">
+    <div class="TestBoxBottom">3</div>
+  </div>
+</div>
+{% endcall %}
+
+<!--START TEST 11-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--alignRight</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--alignRight', when2, "all grid cells are right-aligned but not their content." ) %}
+<div class="Grid Grid--alignRight">
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">2</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">3</div>
+  </div>
+</div>
+{% endcall %}
+
+
+<!--START TEST 12-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--alignMiddle</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--alignMiddle', when2, "all grid cells are middle-aligned." ) %}
+<div class="Grid Grid--alignMiddle">
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox u-height-8rem">2</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBoxRight">3</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBoxRight">4</div>
+  </div>
+</div>
+{% endcall %}
+
+<!--START TEST 12-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--alignBottom</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--alignBottom', when2, "all grid cells are bottom-aligned." ) %}
+<div class="Grid Grid--alignBottom">
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox u-height-8rem">2</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">3</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">4</div>
+  </div>
+</div>
+{% endcall %}
+
+<!--START TEST 12-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--equalHeight</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--equalHeight', when2, "equal height columns are rendered based on tallest cell." ) %}
+<div class="Grid Grid--equalHeight">
+  <div class="u-size1of3">
+    <div class="TestBoxLeft u-sizeFill">1</div>
+  </div>
+  <div class="u-size1of3">
+    <div class="TestBoxLeft u-sizeFill">2<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+  </div>
+  <div class="u-size1of3">
+    <div class="TestBox u-sizeFill">3</div>
+  </div>
+</div>
+{% endcall %}
+
+<!--START TEST 13-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid u-flexExpand</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid u-flexExpand', when2, "Align an individual grid cell but not its content" ) %}
+<div class="Grid">
+  <div class="u-size1of2">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of2">
+    <div class="TestBox">2</div>
+  </div>
+  <div class="u-size3of4 u-flex-expand-left u-flex-expand-right">
+    <div class="TestBoxBottom">3: centered cell</div>
+  </div>
+  <div class="u-size3of4 u-flex-expand-right">
+    <div class="TestBoxBottom">4: left aligned cell</div>
+  </div>
+  <div class="u-size3of4 u-flex-expand-left">
+    <div class="TestBoxBottom">4: right aligned cell</div>
+  </div>
+</div>
+{% endcall %}
+
+
+<!--START TEST 14-->
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid u-flexJustify</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid u-flexJustify', when2, "Align an individual grid cell but not its content" ) %}
+<div class="Grid">
+  <div class="u-size1of2">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of2">
+    <div class="TestBox">2</div>
+  </div>
+  <div class="u-flex u-flex-justify-center">
+    <div class="TestBoxBottom u-size3of4">3: centered cell</div>
+  </div>
+  <div class="u-flex u-flex-justify-start">
+    <div class="TestBoxBottom u-size3of4">4: left aligned cell</div>
+  </div>
+  <div class="u-flex u-flex-justify-end">
+    <div class="TestBoxBottom u-size3of4">5: right aligned cell</div>
+  </div>
+</div>
+{% endcall %}
+
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--withGutter</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--withGutter', when2, "Renders gutters" ) %}
+<div class="Grid Grid--withGutter">
+  <div class="u-size1of4">
+    <div class="TestBox">1</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">2</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">3</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">4</div>
+  </div>
+</div>
+{% endcall %}
+
+
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--withGutter</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--withGutter', when2, "it doesn't apply gutters to nested grids" ) %}
+<div class="Grid Grid--withGutter">
+  <div class="u-size1of2">
+    <div class="TestCanvas">
+      Level 1
+      <div class="Grid">
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="u-size1of2">
+    <div class="TestCanvas">
+      Level 1
+      <div class="Grid">
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+{% endcall %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--withGutter</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--withGutter', when2, "it correctly aligns gutters when using offsets" )%}
+<div class="Grid Grid--withGutter">
+  <div class="u-size1of4">
+    <div class="TestBox">1</div>
+  </div>
+  <div class="u-before1of4 u-size1of4">
+    <div class="TestBox">2</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">3</div>
+  </div>
+</div>
+<div class="Grid Grid--withGutter">
+  <div class="u-before1of2">
+    <div class="TestBoxBottom">1</div>
+  </div>
+</div>
+{% endcall %}
+
+
+
+
+
+
+
+
+
+
+
+
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--withGutter</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--withGutter', when2, "correctly aligns gutters within nested grids" )%}
+<div class="Grid Grid--withGutter">
+  <div class="u-size1of2">
+    <div class="TestCanvas">
+      Level 1
+      <div class="Grid Grid--withGutter">
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="u-size1of2">
+    <div class="TestCanvas">
+      Level 1
+      <div class="Grid Grid--withGutter">
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+{% endcall %}
+
+
+
+
+
+
+
+
+
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--fill</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--fill', when2, "correctly adds gutters with Grid--fill" )%}
+    <div class="Grid Grid--withGutter Grid--fill">
+      <div>
+        <div class="TestBox">1</div>
+      </div>
+      <div>
+        <div class="TestBox">2</div>
+      </div>
+      <div>
+        <div class="TestBox">3</div>
+      </div>
+    </div>
+    <div class="Grid Grid--withGutter Grid--fill">
+      <div>
+        <div class="TestBox">1</div>
+      </div>
+      <div>
+        <div class="TestBox">2</div>
+      </div>
+    </div>
+{% endcall %}
+
+
+
+
+
+{% set when2 %}
+<code class="u-text-color-md-pink-400">Grid--fill</code> is applied.
+{% endset %}
+{% call Test.component( 'Grid--fill', when2, "correctly adds gutters with Grid--fit" )%}
+ <div class="Grid Grid--withGutter Grid--fit">
+   <div>
+     <div class="TestBox">Lorem ipsum dolor sit amet, Lorem ipsum.</div>
+   </div>
+   <div>
+     <div class="TestBox">Lorem ipsum dolor sit amet, consectetur.</div>
+   </div>
+   <div>
+     <div class="TestBox">Lorem ipsum.</div>
+   </div>
+ </div>
+{% endcall %}
+
+
+
+
+
+
+
+
+</body>
+
+</html>
