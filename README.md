@@ -1,8 +1,8 @@
-# Test component
+# Grid component
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/superflycss/component-test.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/superflycss/component-grid.svg)](https://greenkeeper.io/)
 
-[![Build Status](https://travis-ci.org/superflycss/component-test.svg?branch=master)](https://travis-ci.org/superflycss/component-test)
+[![Build Status](https://travis-ci.org/superflycss/component-grid.svg?branch=master)](https://travis-ci.org/superflycss/component-grid)
 
 ## Installation
 
@@ -14,4 +14,4 @@ See [Usage](https://github.com/superflycss/superflycss/#usage)
 
 ## Tests
 
-[Superfly CSS test Component Tests](https://superflycss.github.io/component-test/target/test/html/)
+[Superfly CSS test Component Tests](https://superflycss.github.io/component-grid/target/test/html/)
