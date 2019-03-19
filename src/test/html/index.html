@@ -47,6 +47,27 @@
 </div>
 {% endcall %}
 
+
+{% set when1 %}
+<code class="u-text-color-md-pink-400">Grid </code> is applied.
+{% endset %}
+{% call Test.component( 'Grid', when1, 'Cells are rendered with the sizing utility applied when the viewport is large otherwise they are full width.' ) %}
+<div class="Grid Grid--withGutter">
+  <div class="u-md-size1of2 u-lg-size1of4">
+    <div class="TestBox">1</div>
+  </div>
+  <div class="u-md-size1of2 u-lg-size1of4">
+    <div class="TestBox">2</div>
+  </div>
+  <div class="u-md-size1of2 u-lg-size1of4">
+    <div class="TestBox">3</div>
+  </div>
+  <div class="u-md-size1of2 u-lg-size1of4">
+    <div class="TestBox">4</div>
+  </div>
+</div>
+{% endcall %}
+
 <!--START TEST 2-->
 {% set when2 %}
 <code class="u-text-color-md-pink-400">Grid</code> is applied.
