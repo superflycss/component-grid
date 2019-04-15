@@ -1,0 +1,44 @@
+{
+  "name": "@superflycss/component-grid",
+  "version": "1.0.3",
+  "description": "Grid component",
+  "main": "index.css",
+  "scripts": {
+    "update": "ncu -u && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superflycss/component-grid.git"
+  },
+  "keywords": [
+    "css",
+    "component",
+    "superflycss",
+    "grid"
+  ],
+  "author": "Ole Ersoy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/superflycss/component-grid/issues"
+  },
+  "homepage": "https://github.com/superflycss/component-grid#readme",
+  "dependencies": {
+    "@superflycss/variables-dimension": "^2.0.0",
+    "@superflycss/variables-fonts": "^3.0.0",
+    "@superflycss/variables-layout": "^2.0.0"
+  },
+  "devDependencies": {
+    "@superflycss/component-body": "^1.0.1",
+    "@superflycss/component-display": "^1.0.2",
+    "@superflycss/component-header": "^2.1.0",
+    "@superflycss/component-test": "3.6.29",
+    "@superflycss/foundation": "^2.0.3",
+    "@superflycss/utilities-colors": "^3.1.0",
+    "@superflycss/utilities-effects": "^2.1.0",
+    "@superflycss/utilities-fonts": "^3.3.7",
+    "@superflycss/utilities-format": "^1.2.6",
+    "@superflycss/utilities-layout": "^4.0.22",
+    "lite-server": "^2.4.0",
+    "npm-check-updates": "^3.1.7"
+  }
+}

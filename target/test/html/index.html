@@ -1,0 +1,1688 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Tests for @superflycss/component-grid</title>
+  <link href="../css/index.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+
+  <header class="Header--column">
+    <h1 class="Display--fs400fw700">Component Grid</h1>
+    <a class="Header_link" href="https://github.com/superflycss/component-grid/">Github</a>
+  </header>
+
+
+<!--START TEST 1-->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-border-top-style-none"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">Cells are rendered at full-width by default.</div>
+     <div class="TestRender">
+
+<div class="Grid">
+  <div>
+    <div class="TestBox">1</div>
+  </div>
+  <div>
+    <div class="TestBox u-border-top-style-none">2</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-lg-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">Cells are rendered with the sizing utility applied when the viewport is large otherwise they are full width.</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--withGutter">
+  <div class="u-lg-size1of4">
+    <div class="TestBox">1</div>
+  </div>
+  <div class="u-lg-size1of4">
+    <div class="TestBox">2</div>
+  </div>
+  <div class="u-lg-size1of4">
+    <div class="TestBox">3</div>
+  </div>
+  <div class="u-lg-size1of4">
+    <div class="TestBox">4</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid </code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size1of2 u-lg-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size1of2 u-lg-size1of4 "</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-border-top-style-none u-md-border-top-style-solid"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size1of2  u-lg-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-border-top-style-none  u-lg-border-top-style-solid"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-md-size1of2 u-lg-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-border-top-style-none u-lg-border-top-style-solid"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">Cells are rendered with the sizing utility applied when the viewport is large otherwise they are full width.</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--withGutter">
+  <div class="u-md-size1of2 u-lg-size1of4">
+    <div class="TestBox">1</div>
+  </div>
+  <div class="u-md-size1of2 u-lg-size1of4 ">
+    <div class="TestBox u-border-top-style-none u-md-border-top-style-solid">2</div>
+  </div>
+  <div class="u-md-size1of2  u-lg-size1of4">
+    <div class="TestBox u-border-top-style-none  u-lg-border-top-style-solid">3</div>
+  </div>
+  <div class="u-md-size1of2 u-lg-size1of4">
+    <div class="TestBox u-border-top-style-none u-lg-border-top-style-solid">4</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!--START TEST 2-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">inter-cell whitespace is removed.</div>
+     <div class="TestRender">
+
+<div class="Grid">
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">2</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">3</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">4</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!--START TEST 3-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>This is some really really really really really long content that should be scrolled when the container is too small.<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>This is some really really really really really long content that should be scrolled when the container is too small.<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">overflowing elements are scrolled.</div>
+     <div class="TestRender">
+
+    <div class="Grid">
+      <div class="u-size1of2">
+        <div class="TestBoxLeft">
+<pre>This is some really really really really really long content that should be scrolled when the container is too small.</pre>
+        </div>
+      </div>
+      <div class="u-size1of2">
+        <div class="TestBox">
+<pre>This is some really really really really really long content that should be scrolled when the container is too small.</pre>
+        </div>
+      </div>
+    </div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!--START TEST 4-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottomLeft"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottomLeft"</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottomLeft"</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottom"</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">cells automatically wrap across multiple lines when they don't fit a single row.</div>
+     <div class="TestRender">
+
+  <div class="Grid">
+      <div class="u-size1of4">
+        <div class="TestBoxLeft">1</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBoxLeft">2</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBoxLeft">3</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBox">4</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBoxBottomLeft">5</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBoxBottomLeft">6</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBoxBottomLeft">7</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="TestBoxBottom">8</div>
+      </div>
+    </div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!--START TEST 5-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-min-height-8rem"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-min-height-4rem"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-min-height-8rem"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-min-height-4rem"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-min-height-8rem"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-min-height-4rem"</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-min-height-8rem"</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-min-height-4rem"</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">cells of different heights are arranged into clear rows.</div>
+     <div class="TestRender">
+
+<div class="Grid">
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-8rem">1</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-4rem">2</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-8rem">3</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-4rem">4</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-8rem">5</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-4rem">6</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-8rem">7</div>
+    </div>
+    <div class="u-size1of4">
+      <div class="TestBox u-min-height-4rem">8</div>
+    </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!--START TEST 5-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size3of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>
+      Level 1
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of3"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft u-background-color-md-grey-900"</span>&gt;</span>Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of3"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft u-background-color-md-grey-900"</span>&gt;</span>Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of3"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-background-color-md-grey-900"</span>&gt;</span>Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">it supports nested grids.</div>
+     <div class="TestRender">
+
+<div class="Grid">
+  <div class="u-size3of4">
+    <div class="TestBox">
+      Level 1
+      <div class="Grid">
+        <div class="u-size1of3">
+          <div class="TestBoxLeft u-background-color-md-grey-900">Level 2</div>
+        </div>
+        <div class="u-size1of3">
+          <div class="TestBoxLeft u-background-color-md-grey-900">Level 2</div>
+        </div>
+        <div class="u-size1of3">
+          <div class="TestBox u-background-color-md-grey-900">Level 2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!--START TEST 6-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>1/4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFill"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>auto<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size2of12"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottomLeft"</span>&gt;</span>2/12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFill"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottomLeft"</span>&gt;</span>auto<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size2of12"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottom"</span>&gt;</span>2/12<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">supports u-sizeFill on cells with no width.</div>
+     <div class="TestRender">
+
+<div class="Grid">
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">1/4</div>
+  </div>
+  <div class="u-sizeFill">
+    <div class="TestBox">auto</div>
+  </div>
+</div>
+<div class="Grid">
+  <div class="u-size2of12">
+    <div class="TestBoxBottomLeft">2/12</div>
+  </div>
+  <div class="u-sizeFill">
+    <div class="TestBoxBottomLeft">auto</div>
+  </div>
+  <div class="u-size2of12">
+    <div class="TestBoxBottom">2/12</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!--START TEST 7-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFit"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>u-sizeFit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-sizeFill"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>u-sizeFill<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">supports u-sizeFit and u-sizeFill.</div>
+     <div class="TestRender">
+
+<div class="Grid">
+  <div class="u-sizeFit">
+    <div class="TestBoxLeft">u-sizeFit</div>
+  </div>
+  <div class="u-sizeFill">
+    <div class="TestBox">u-sizeFill</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!--START TEST 8-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--fill</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--fill</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--fill"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--fill"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottomLeft"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottomLeft"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottomLeft"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottomLeft"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottomLeft"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottom"</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">evenly distribute space between cells without sizing classes.</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--fill">
+  <div>
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div>
+    <div class="TestBoxLeft">2</div>
+  </div>
+  <div>
+    <div class="TestBox">3</div>
+  </div>
+</div>
+<div class="Grid Grid--fill">
+  <div>
+    <div class="TestBoxBottomLeft">1</div>
+  </div>
+  <div>
+    <div class="TestBoxBottomLeft">2</div>
+  </div>
+  <div>
+    <div class="TestBoxBottomLeft">3</div>
+  </div>
+  <div>
+    <div class="TestBoxBottomLeft">4</div>
+  </div>
+  <div>
+    <div class="TestBoxBottomLeft">5</div>
+  </div>
+  <div>
+    <div class="TestBoxBottom">6</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!--START TEST 9-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--fit</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--fit</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--fit TestCanvas"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>1<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> Lorem ipsum dolor sit amet<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>2<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> dolor sit amet<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>3<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--fit Grid--alignCenter"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-sizeFill"</span>&gt;</span>1<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxRight u-sizeFill"</span>&gt;</span>2<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> dolor sit amet<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxRight u-sizeFill"</span>&gt;</span>3<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">it fits cells to their content.</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--fit TestCanvas">
+  <div>
+    <div class="TestBoxLeft">1<br> Lorem ipsum dolor sit amet</div>
+  </div>
+  <div>
+    <div class="TestBoxLeft">2<br> dolor sit amet</div>
+  </div>
+  <div>
+    <div class="TestBox">3<br> consectetur adipiscing elit</div>
+  </div>
+</div>
+<div class="Grid Grid--fit Grid--alignCenter">
+  <div class="u-size1of3">
+    <div class="TestBox u-sizeFill">1<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+  </div>
+  <div>
+    <div class="TestBoxRight u-sizeFill">2<br> dolor sit amet</div>
+  </div>
+  <div>
+    <div class="TestBoxRight u-sizeFill">3<br> consectetur adipiscing elit</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!--START TEST 10-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--alignCenter</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--alignCenter</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--alignCenter"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottom"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">all grid cells are center-aligns but not their content.</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--alignCenter">
+  <div class="u-size1of3">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of3">
+    <div class="TestBox">2</div>
+  </div>
+  <div class="u-size1of2">
+    <div class="TestBoxBottom">3</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!--START TEST 11-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--alignRight</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--alignRight</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--alignRight"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">all grid cells are right-aligned but not their content.</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--alignRight">
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">2</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">3</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!--START TEST 12-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--alignMiddle</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--alignMiddle</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--alignMiddle"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-height-8rem"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxRight"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxRight"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">all grid cells are middle-aligned.</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--alignMiddle">
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox u-height-8rem">2</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBoxRight">3</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBoxRight">4</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!--START TEST 12-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--alignBottom</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--alignBottom</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--alignBottom"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-height-8rem"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">all grid cells are bottom-aligned.</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--alignBottom">
+  <div class="u-size1of4">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox u-height-8rem">2</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">3</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">4</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!--START TEST 12-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--equalHeight</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--equalHeight</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--equalHeight"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft u-sizeFill"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft u-sizeFill"</span>&gt;</span>2<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox u-sizeFill"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">equal height columns are rendered based on tallest cell.</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--equalHeight">
+  <div class="u-size1of3">
+    <div class="TestBoxLeft u-sizeFill">1</div>
+  </div>
+  <div class="u-size1of3">
+    <div class="TestBoxLeft u-sizeFill">2<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+  </div>
+  <div class="u-size1of3">
+    <div class="TestBox u-sizeFill">3</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+<!--START TEST 13-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid u-flexExpand</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid u-flexExpand</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size3of4 u-flex-expand-left u-flex-expand-right"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottom"</span>&gt;</span>3: centered cell<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size3of4 u-flex-expand-right"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottom"</span>&gt;</span>4: left aligned cell<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size3of4 u-flex-expand-left"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottom"</span>&gt;</span>4: right aligned cell<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">Align an individual grid cell but not its content</div>
+     <div class="TestRender">
+
+<div class="Grid">
+  <div class="u-size1of2">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of2">
+    <div class="TestBox">2</div>
+  </div>
+  <div class="u-size3of4 u-flex-expand-left u-flex-expand-right">
+    <div class="TestBoxBottom">3: centered cell</div>
+  </div>
+  <div class="u-size3of4 u-flex-expand-right">
+    <div class="TestBoxBottom">4: left aligned cell</div>
+  </div>
+  <div class="u-size3of4 u-flex-expand-left">
+    <div class="TestBoxBottom">4: right aligned cell</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+<!--START TEST 14-->
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid u-flexJustify</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid u-flexJustify</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxLeft"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex u-flex-justify-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottom u-size3of4"</span>&gt;</span>3: centered cell<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex u-flex-justify-start"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottom u-size3of4"</span>&gt;</span>4: left aligned cell<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-flex u-flex-justify-end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottom u-size3of4"</span>&gt;</span>5: right aligned cell<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">Align an individual grid cell but not its content</div>
+     <div class="TestRender">
+
+<div class="Grid">
+  <div class="u-size1of2">
+    <div class="TestBoxLeft">1</div>
+  </div>
+  <div class="u-size1of2">
+    <div class="TestBox">2</div>
+  </div>
+  <div class="u-flex u-flex-justify-center">
+    <div class="TestBoxBottom u-size3of4">3: centered cell</div>
+  </div>
+  <div class="u-flex u-flex-justify-start">
+    <div class="TestBoxBottom u-size3of4">4: left aligned cell</div>
+  </div>
+  <div class="u-flex u-flex-justify-end">
+    <div class="TestBoxBottom u-size3of4">5: right aligned cell</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--withGutter</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--withGutter</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">Renders gutters</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--withGutter">
+  <div class="u-size1of4">
+    <div class="TestBox">1</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">2</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">3</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">4</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--withGutter</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--withGutter</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas"</span>&gt;</span>
+      Level 1
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas"</span>&gt;</span>
+      Level 1
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">it doesn't apply gutters to nested grids</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--withGutter">
+  <div class="u-size1of2">
+    <div class="TestCanvas">
+      Level 1
+      <div class="Grid">
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="u-size1of2">
+    <div class="TestCanvas">
+      Level 1
+      <div class="Grid">
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--withGutter</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--withGutter</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-before1of4 u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-before1of2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBoxBottom"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">it correctly aligns gutters when using offsets</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--withGutter">
+  <div class="u-size1of4">
+    <div class="TestBox">1</div>
+  </div>
+  <div class="u-before1of4 u-size1of4">
+    <div class="TestBox">2</div>
+  </div>
+  <div class="u-size1of4">
+    <div class="TestBox">3</div>
+  </div>
+</div>
+<div class="Grid Grid--withGutter">
+  <div class="u-before1of2">
+    <div class="TestBoxBottom">1</div>
+  </div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--withGutter</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--withGutter</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas"</span>&gt;</span>
+      Level 1
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestCanvas"</span>&gt;</span>
+      Level 1
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-size1of2"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>Level 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">correctly aligns gutters within nested grids</div>
+     <div class="TestRender">
+
+<div class="Grid Grid--withGutter">
+  <div class="u-size1of2">
+    <div class="TestCanvas">
+      Level 1
+      <div class="Grid Grid--withGutter">
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="u-size1of2">
+    <div class="TestCanvas">
+      Level 1
+      <div class="Grid Grid--withGutter">
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+        <div class="u-size1of2">
+          <div class="TestBox">Level 2</div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--fill</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--fill</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter Grid--fill"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter Grid--fill"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">correctly adds gutters with Grid--fill</div>
+     <div class="TestRender">
+
+    <div class="Grid Grid--withGutter Grid--fill">
+      <div>
+        <div class="TestBox">1</div>
+      </div>
+      <div>
+        <div class="TestBox">2</div>
+      </div>
+      <div>
+        <div class="TestBox">3</div>
+      </div>
+    </div>
+    <div class="Grid Grid--withGutter Grid--fill">
+      <div>
+        <div class="TestBox">1</div>
+      </div>
+      <div>
+        <div class="TestBox">2</div>
+      </div>
+    </div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Grid--fill</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<code class="u-text-color-md-pink-400">Grid--fill</code> is applied.
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+ <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Grid Grid--withGutter Grid--fit"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>Lorem ipsum dolor sit amet, Lorem ipsum.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TestBox"</span>&gt;</span>Lorem ipsum.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">correctly adds gutters with Grid--fit</div>
+     <div class="TestRender">
+
+ <div class="Grid Grid--withGutter Grid--fit">
+   <div>
+     <div class="TestBox">Lorem ipsum dolor sit amet, Lorem ipsum.</div>
+   </div>
+   <div>
+     <div class="TestBox">Lorem ipsum dolor sit amet, consectetur.</div>
+   </div>
+   <div>
+     <div class="TestBox">Lorem ipsum.</div>
+   </div>
+ </div>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
